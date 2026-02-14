@@ -236,4 +236,119 @@ textarea{min-height:140px;resize:vertical}
 .article p{margin:0 0 14px}
 .article ul{margin:0 0 16px;padding-left:20px}
 .signature{margin-top:26px;padding-top:16px;border-top:1px solid #eee;color:#444}
-.signature strong{color:var(--navy)}
+.signature strong{color:var(--navy)}/* =========================
+   PATCH v1 — Executive Clean + Click fix + Header + Quote
+   ========================= */
+
+/* HERO: mai înalt, focus pe culoar */
+header {
+  min-height: 520px;
+  background-position: center 70%;
+}
+
+/* dacă ai overlay în header, îl facem mai light și “non-clickable” */
+header::before,
+.hero::before {
+  pointer-events: none;
+}
+
+/* QUOTE BOX: mai compact + ghilimele decorative (nu mai stau singure pe linie) */
+.quote-box {
+  padding: 28px 28px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 860px;
+  position: relative;
+}
+
+.quote-box::before {
+  content: "“";
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  font-size: 3rem;
+  opacity: 0.18;
+}
+
+.quote-box::after {
+  content: "”";
+  position: absolute;
+  bottom: 4px;
+  right: 16px;
+  font-size: 3rem;
+  opacity: 0.18;
+}
+
+/* KNOWLEDGE HUB: fundal “ice-blue → alb” */
+.kb-section {
+  background: linear-gradient(180deg, #f4f7f9 0%, #ffffff 100%);
+  border-radius: 18px;
+  padding: 38px 22px;
+}
+
+/* EXECUTIVE CLEAN: linie de accent pe carduri + hover discret */
+.kb-card,
+.article-card,
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.kb-card::before,
+.article-card::before,
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 4px;
+  background: rgba(40, 167, 69, 0.65); /* verde discret */
+  border-radius: 999px;
+}
+
+/* număr mare, foarte discret (dacă există data-num pe card) */
+.kb-card::after {
+  content: attr(data-num);
+  position: absolute;
+  right: 14px;
+  top: 8px;
+  font-size: 46px;
+  font-weight: 800;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* HOVER: elegant, fără agresivitate */
+.kb-card:hover,
+.article-card:hover,
+.card:hover {
+  transform: translateY(-2px);
+  transition: 0.18s ease;
+}
+
+.kb-card:hover::before,
+.article-card:hover::before,
+.card:hover::before {
+  background: rgba(40, 167, 69, 0.95);
+}
+
+/* FIX CLICK: “stretched link” — linkul acoperă tot cardul */
+.stretched-link {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.kb-card *, .article-card *, .card * {
+  position: relative;
+  z-index: 6; /* textul rămâne deasupra */
+}
+
+.kb-card a, .article-card a, .card a {
+  text-decoration: none;
+  color: inherit;
+}
