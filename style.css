@@ -352,3 +352,8 @@ header::before,
   text-decoration: none;
   color: inherit;
 }
+.article-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
