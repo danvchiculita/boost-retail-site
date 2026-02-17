@@ -655,3 +655,57 @@ textarea{ min-height:140px; resize:vertical; }
   .hero h1{ font-size:2.4rem; }
   .article{ padding:28px 20px; }
 }
+/* =========================
+   PREMIUM PATCH v2 (Header overlay + Tagline + Grid)
+   ========================= */
+
+/* ca headerul absolut să se raporteze corect */
+body{ position:relative; }
+
+/* HERO pe top */
+.hero-banner--top{
+  height:420px;
+  position:relative;
+}
+
+/* mic overlay discret ca textul să fie lizibil */
+.hero-banner--top::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.18) 70%, rgba(0,0,0,.12) 100%);
+  pointer-events:none;
+}
+
+/* HEADER peste poză (mai sus decât acum) */
+.masthead--overlay{
+  position:absolute;
+  top:28px;               /* ↓ schimbă aici dacă vrei mai sus/jos (18–48px) */
+  left:0;
+  right:0;
+  z-index:50;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid rgba(0,0,0,0.06);
+}
+
+.masthead--overlay .masthead-inner{
+  padding-top:18px;
+  padding-bottom:18px;
+}
+
+/* TAGLINE mare, centrat, vizibil */
+.hero-tagline{
+  position:absolute;
+  left:50%;
+  top:62%;
+  transform:translate(-50%,-50%);
+  z-index:60;
+  font-weight:900;
+  letter-spacing:0.08em;
+  font-size:44px;         /* ↑ mai mare */
+  color:#fff;
+  text-transform:uppercase;
+  text-align:center;
+  text-shadow:0 10px 24px rgba(0,0,0,0.45);
+  padding:10px
