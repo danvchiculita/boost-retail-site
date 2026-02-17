@@ -664,7 +664,7 @@ body{ position:relative; }
 
 /* HERO pe top */
 .hero-banner--top{
-  height:420px;
+  height:480px;
   position:relative;
 }
 
@@ -701,11 +701,14 @@ body{ position:relative; }
   top:62%;
   transform:translate(-50%,-50%);
   z-index:60;
-  font-weight:900;
-  letter-spacing:0.08em;
-  font-size:44px;         /* ↑ mai mare */
-  color:#fff;
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight:800;
+  letter-spacing:0.10em;
+  font-size:48px;
+
+  color:#ffffff;
   text-transform:uppercase;
   text-align:center;
-  text-shadow:0 10px 24px rgba(0,0,0,0.45);
-  padding:10px
+  text-shadow:0 12px 28px rgba(0,0,0,0.45);
+}
