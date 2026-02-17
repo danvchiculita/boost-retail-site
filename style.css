@@ -464,7 +464,7 @@ select{
 .check-item strong{
   display:block;
   margin-bottom:8px;
-  color:#b6ffbf;
+  color: #0b3a63;
   font-size:1rem;
   text-transform:uppercase;
   letter-spacing:.08em;
@@ -712,3 +712,47 @@ body{ position:relative; }
   text-align:center;
   text-shadow:0 12px 28px rgba(0,0,0,0.45);
 }
+/* Subtitle Knowledge Hub – mai vizibil */
+.section-subtitle{
+  font-size:1.10rem;
+  color:rgba(0,32,63,0.72);
+}
+
+.section-subtitle--strong{
+  font-size:1.12rem;
+  color:rgba(0,32,63,0.78);
+}
+/* Subtitle Knowledge Hub – mai vizibil */
+.section-subtitle{
+  font-size:1.10rem;
+  color:rgba(0,32,63,0.72);
+}
+
+.section-subtitle--strong{
+  font-size:1.12rem;
+  color:rgba(0,32,63,0.78);
+}
+
+/* Checklist subtitle – mai vizibil */
+.checklist-wrap .section-subtitle{
+  font-size:1.15rem;
+  color:rgba(0,32,63,0.75);
+  max-width:900px;
+}
+
+/* Services subtitle – mai vizibil */
+.after-articles .section-subtitle{
+  font-size:1.18rem;
+  color:rgba(0,32,63,0.78);
+  font-weight:500;
+  max-width:820px;
+}
+
+/* Linie diferentiere serii */
+
+.article-card.series-greseli::before{
+  background: rgba(40, 167, 69, 0.85); /* verde */
+}
+
+.article-card.series-framework::before{
+  background: rgba(0, 32, 63, 0.85); /* navy */
