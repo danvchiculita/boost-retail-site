@@ -748,11 +748,21 @@ body{ position:relative; }
   max-width:820px;
 }
 
-/* Linie diferentiere serii */
+/* Linie diferentiere serii (FORCE) */
 
 .article-card.series-greseli::before{
-  background: rgba(40, 167, 69, 0.85); /* verde */
+  background: rgba(40, 167, 69, 0.85) !important;
 }
 
 .article-card.series-framework::before{
-  background: rgba(0, 32, 63, 0.85); /* navy */
+  background: rgba(0, 32, 63, 0.85) !important;
+}
+
+.article-card.series-greseli:hover::before{
+  background: rgba(40, 167, 69, 0.95) !important;
+}
+
+.article-card.series-framework:hover::before{
+  background: rgba(0, 32, 63, 0.95) !important;
+}
+
