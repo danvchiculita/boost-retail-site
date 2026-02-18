@@ -1,360 +1,407 @@
 <!doctype html>
 <html lang="ro">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Boost Retail | Knowledge Hub</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Knowledge Hub: insight practic despre retail modern, IKA, pricing, contracte, execuție și cash-flow." />
+
+  <!-- Font (1 singur sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- HERO image first (so a bit of photo remains visible above the white header) -->
-  <section class="hero-banner hero-banner--top" aria-label="Hero banner">
-    <div class="hero-tagline">DIAGNOSTIC. DECIZIE. EXECUTIE.</div>
-  </section>
-
-  <!-- Header overlays the banner, slightly lower -->
-  <header class="masthead masthead--overlay">
-    <div class="masthead-inner">
-      <div class="brand-block">
+  <!-- HEADER (sticky, slim) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
         <div class="brand-name">Dan Chiculiță</div>
-        <div class="brand-role">Senior Commercial Consultant | Retail &amp; IKA Strategy</div>
+        <div class="brand-role">Senior Commercial Consultant | Retail &amp; FMCG Strategy</div>
       </div>
 
-      <nav class="navigation" aria-label="Navigație principală">
-        <a class="active" href="index-blog.html">Acasă</a>
-        <a href="blog.html">Blog</a>
-        <a href="https://www.linkedin.com/in/danchiculita" target="_blank" rel="noopener">LinkedIn</a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Acasă</a>
+        <a class="nav-link active" href="index-blog.html">Articole</a>
+        <a class="nav-link" href="https://www.linkedin.com/in/danchiculita" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="nav-sep">|</span>
+        <a class="nav-link lang disabled" href="#" aria-disabled="true" title="RO este varianta curentă">RO</a>
+        <a class="nav-link lang" href="#" aria-disabled="true" title="EN – în lucru">EN</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-slogan">DIAGNOSTIC. DECIZIE. EXECUȚIE.</div>
+    </div>
+  </section>
 
-    <section class="container">
-      <h2 id="articles" class="section-title">Knowledge Hub</h2>
-      <p class="section-subtitle section-subtitle--strong">
-        Articole scurte, directe, construite pe mecanisme reale din retailul modern.
-      </p>
-    </section>
+  <!-- BLOC METODOLOGIC (sub hero) -->
+  <section class="section section-white" id="metoda">
+    <div class="container">
+      <h2 class="section-title">Strategie comercială construită pe claritate, nu pe presupuneri.</h2>
 
-    <!-- =========================
-         SERIES 1: Greșeli Scumpe în IKA
-         ========================= -->
-    <section class="container">
-      <h3 class="series-title series-title--greseli">Greșeli Scumpe în IKA</h3>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-title">Diagnostic</div>
+          <div class="pillar-text">Analizăm factual categoria, marja și riscul contractual.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">Decizie</div>
+          <div class="pillar-text">Stabilim ce merită listat, renegociat sau eliminat.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">Execuție</div>
+          <div class="pillar-text">Construim disciplină operațională care produce rezultate repetabile.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <section class="articles-grid" aria-label="Greșeli Scumpe în IKA">
-        <a href="episodul-1-listarea-fara-diagnostic.html" class="article-card-link">
-          <article class="article-card series-greseli" data-num="01">
-            <img class="article-thumb" src="images/episod-01-listare.jpg" alt="Listarea fără diagnostic">
-            <div class="article-meta">🕒 2 min • IKA</div>
-            <h3>Episodul 1. Listarea fără diagnostic</h3>
-            <p>Validare sau „capcană” financiară?</p>
+  <!-- KNOWLEDGE HUB -->
+  <section class="section section-soft" id="articles">
+    <div class="container">
+      <h2 class="section-title">Knowledge Hub</h2>
+      <p class="section-subtitle">Insight practic despre retail modern.</p>
+
+      <!-- SERIA 1 -->
+      <div class="series-head">
+        <div class="series-title">Greșeli Scumpe în IKA</div>
+        <div class="series-note">Episoade scurte, directe, pe mecanisme reale din retailul modern.</div>
+      </div>
+
+      <div class="cards-grid">
+        <!-- 01 -->
+        <a class="card-link" href="episodul-1-listarea-fara-diagnostic.html">
+          <article class="card series-green" data-num="01">
+            <div class="card-meta">2 min • IKA</div>
+            <div class="card-title">Episodul 1. Listarea fără diagnostic</div>
+            <div class="card-subtitle">Validare sau „capcană” financiară?</div>
           </article>
         </a>
 
-        <a href="distributia-nu-corecteaza-amplifica.html" class="article-card-link">
-          <article class="article-card series-greseli" data-num="02">
-            <img class="article-thumb" src="images/episod-02-distributie.jpg" alt="Distribuția nu corectează">
-            <div class="article-meta">🕒 2 min • Distribuție</div>
-            <h3>Episodul 2. Distribuția nu corectează. Amplifică.</h3>
-            <p>Iluzia progresului prin volum</p>
+        <!-- 02 -->
+        <a class="card-link" href="distributia-nu-corecteaza-amplifica.html">
+          <article class="card series-green" data-num="02">
+            <div class="card-meta">2 min • Distribuție</div>
+            <div class="card-title">Episodul 2. Distribuția nu corectează. Amplifică.</div>
+            <div class="card-subtitle">Iluzia progresului prin volum</div>
           </article>
         </a>
 
-        <a href="episodul-3-contractul-citit-doar-la-pret.html" class="article-card-link">
-          <article class="article-card series-greseli" data-num="03">
-            <img class="article-thumb" src="images/episod-03-contract.jpg" alt="Contractul citit doar la preț">
-            <div class="article-meta">🕒 6 min • Contract</div>
-            <h3>Episodul 3. Contractul citit doar la preț</h3>
-            <p>Prețul deschide ușa, dar contractul definește jocul.</p>
+        <!-- 03 -->
+        <a class="card-link" href="episodul-3-contractul-citit-doar-la-pret.html">
+          <article class="card series-green" data-num="03">
+            <div class="card-meta">6 min • Contract</div>
+            <div class="card-title">Episodul 3. Contractul citit doar la preț</div>
+            <div class="card-subtitle">Prețul deschide ușa, dar contractul definește jocul.</div>
           </article>
         </a>
 
-        <a href="episodul-4-pretul-stii-ce-inseamna-ieftin-pentru-ika.html" class="article-card-link">
-          <article class="article-card series-greseli" data-num="04">
-            <img class="article-thumb" src="images/episod-04-pret.jpg" alt="Prețul: știi ce înseamnă ieftin pentru IKA?">
-            <div class="article-meta">🕒 2 min • Preț</div>
-            <h3>Episodul 4. Prețul – știi ce înseamnă „ieftin” pentru IKA?</h3>
-            <p>Prețul este ce rămâne în cont după ce sistemul și-a luat partea.</p>
+        <!-- 04 -->
+        <a class="card-link" href="episodul-4-pretul-stii-ce-inseamna-ieftin-pentru-ika.html">
+          <article class="card series-green" data-num="04">
+            <div class="card-meta">2 min • Preț</div>
+            <div class="card-title">Episodul 4. „Ieftin” pentru IKA?</div>
+            <div class="card-subtitle">Prețul este ce rămâne în cont după ce sistemul își ia partea.</div>
           </article>
         </a>
 
-        <a href="episodul-5-portofoliul-prea-mare.html" class="article-card-link">
-          <article class="article-card series-greseli" data-num="05">
-            <img class="article-thumb" src="images/episod-05-portofoliu.jpg" alt="Portofoliul prea mare">
-            <div class="article-meta">🕒 2 min • Portofoliu</div>
-            <h3>Episodul 5. Portofoliul prea mare</h3>
-            <p>Complexitatea care ucide profitul: de ce „mai mult” e „mai prost”.</p>
+        <!-- 05 -->
+        <a class="card-link" href="episodul-5-portofoliul-prea-mare.html">
+          <article class="card series-green" data-num="05">
+            <div class="card-meta">2 min • Portofoliu</div>
+            <div class="card-title">Episodul 5. Portofoliul prea mare</div>
+            <div class="card-subtitle">Complexitatea care ucide profitul: „mai mult” devine „mai prost”.</div>
           </article>
         </a>
 
-        <a href="episodul-6-promotia-folosita-ca-solutie.html" class="article-card-link">
-          <article class="article-card series-greseli" data-num="06">
-            <img class="article-thumb" src="images/episod-06-promotie.jpg" alt="Promoția folosită ca pansament, nu ca motor">
-            <div class="article-meta">🕒 2 min • Promoții</div>
-            <h3>Episodul 6. Promoția folosită ca „pansament”, nu ca motor</h3>
-            <p>Dacă volumul scade fără promoție, ai o problemă de relevanță.</p>
+        <!-- 06 -->
+        <a class="card-link" href="episodul-6-promotia-folosita-ca-solutie.html">
+          <article class="card series-green" data-num="06">
+            <div class="card-meta">2 min • Promoții</div>
+            <div class="card-title">Episodul 6. Promoția ca „pansament”</div>
+            <div class="card-subtitle">Dacă volumul scade fără promoție, ai o problemă de relevanță.</div>
           </article>
         </a>
 
-        <a href="episodul-7-executia-lasata-la-intamplare.html" class="article-card-link">
-          <article class="article-card series-greseli" data-num="07">
-            <img class="article-thumb" src="images/episod-07-executie.jpg" alt="Execuția lăsată la întâmplare">
-            <div class="article-meta">🕒 2 min • Execuție</div>
-            <h3>Episodul 7. Execuția lăsată la întâmplare</h3>
-            <p>Disciplina, nu creativitatea, câștigă la raft.</p>
+        <!-- 07 -->
+        <a class="card-link" href="episodul-7-executia-lasata-la-intamplare.html">
+          <article class="card series-green" data-num="07">
+            <div class="card-meta">2 min • Execuție</div>
+            <div class="card-title">Episodul 7. Execuția lăsată la întâmplare</div>
+            <div class="card-subtitle">Disciplina, nu creativitatea, câștigă la raft.</div>
           </article>
         </a>
 
-        <a href="episodul-8-cash-flow-ul-ignorat.html" class="article-card-link">
-          <article class="article-card series-greseli" data-num="08">
-            <img class="article-thumb" src="images/episod-08-cashflow.jpg" alt="Cash-flow-ul ignorat">
-            <div class="article-meta">🕒 2 min • Cash-flow</div>
-            <h3>Episodul 8. Cash-flow-ul ignorat</h3>
-            <p>Poți da faliment vânzând mult. IKA e test de suflu.</p>
+        <!-- 08 -->
+        <a class="card-link" href="episodul-8-cash-flow-ul-ignorat.html">
+          <article class="card series-green" data-num="08">
+            <div class="card-meta">2 min • Cash-flow</div>
+            <div class="card-title">Episodul 8. Cash-flow-ul ignorat</div>
+            <div class="card-subtitle">Poți da faliment vânzând mult. IKA e test de suflu.</div>
           </article>
         </a>
 
-        <a href="episodul-9-resursele-insuficiente.html" class="article-card-link">
-          <article class="article-card series-greseli" data-num="09">
-            <img class="article-thumb" src="images/episod-09-resurse.jpg" alt="Resursele insuficiente">
-            <div class="article-meta">🕒 2 min • Resurse</div>
-            <h3>Episodul 9. Resursele insuficiente</h3>
-            <p>Motorul rămâne fără combustibil când trebuie să accelereze.</p>
+        <!-- 09 -->
+        <a class="card-link" href="episodul-9-resursele-insuficiente.html">
+          <article class="card series-green" data-num="09">
+            <div class="card-meta">2 min • Resurse</div>
+            <div class="card-title">Episodul 9. Resursele insuficiente</div>
+            <div class="card-subtitle">Motorul rămâne fără combustibil când trebuie să accelereze.</div>
           </article>
         </a>
 
-        <a href="episodul-10-concluzie-de-ce-ika-nu-este-pentru-toata-lumea.html" class="article-card-link">
-          <article class="article-card series-greseli" data-num="10">
-            <img class="article-thumb" src="images/episod-10-concluzie.jpg" alt="De ce IKA nu este pentru toată lumea">
-            <div class="article-meta">🕒 2 min • Concluzie</div>
-            <h3>Episodul 10. De ce IKA nu este pentru toată lumea</h3>
-            <p>A nu intra încă este, uneori, cea mai profitabilă decizie.</p>
+        <!-- 10 -->
+        <a class="card-link" href="episodul-10-concluzie-de-ce-ika-nu-este-pentru-toata-lumea.html">
+          <article class="card series-green" data-num="10">
+            <div class="card-meta">2 min • Concluzie</div>
+            <div class="card-title">Episodul 10. De ce IKA nu este pentru toată lumea</div>
+            <div class="card-subtitle">A nu intra încă este, uneori, cea mai profitabilă decizie.</div>
           </article>
         </a>
-      </section>
-    </section>
+      </div>
 
-    <!-- =========================
-         SERIES 2: Framework IKA
-         ========================= -->
-    <section class="container">
-      <h3 class="series-title series-title--framework">Framework IKA</h3>
+      <!-- SERIA 2 -->
+      <div class="series-head series-gap">
+        <div class="series-title">Framework IKA</div>
+        <div class="series-note">Texte de structură: principii, mecanisme și decizii care țin sistemul în picioare.</div>
+      </div>
 
-      <section class="articles-grid" aria-label="Framework IKA">
-        <a href="de-ce-produsele-bune-esueaza-in-retailul-modern.html" class="article-card-link">
-          <article class="article-card series-framework" data-num="F1">
-            <img class="article-thumb" src="images/framework-01-pl.jpg" alt="Framework IKA: De ce produsele bune eșuează">
-            <div class="article-meta">🕒 3 min • Strategie</div>
-            <h3>Framework IKA: De ce produsele bune eșuează</h3>
-            <p>Calitatea este doar biletul de intrare, nu garanția câștigului.</p>
-          </article>
-        </a>
-
-        <a href="de-ce-ika-nu-este-partener-ci-un-client-cu-putere.html" class="article-card-link">
-          <article class="article-card series-framework" data-num="F2">
-            <img class="article-thumb" src="images/framework-02-partener.jpg" alt="Framework IKA: IKA nu este partener, ci client">
-            <div class="article-meta">🕒 3 min • Relație comercială</div>
-            <h3>Framework IKA: IKA nu este partener, ci client</h3>
-            <p>În retailul modern, asimetria riscului este regula jocului.</p>
+      <div class="cards-grid">
+        <a class="card-link" href="de-ce-produsele-bune-esueaza-in-retailul-modern.html">
+          <article class="card series-blue" data-num="F1">
+            <div class="card-meta">3 min • Strategie</div>
+            <div class="card-title">De ce produsele bune eșuează</div>
+            <div class="card-subtitle">Calitatea e biletul de intrare, nu garanția câștigului.</div>
           </article>
         </a>
 
-        <a href="private-label-oportunitate-sau-capcana.html" class="article-card-link">
-          <article class="article-card series-framework" data-num="F3">
-            <img class="article-thumb" src="images/framework-03-negociere.jpg" alt="Framework IKA: Private Label oportunitate sau capcană">
-            <div class="article-meta">🕒 3 min • Private Label</div>
-            <h3>Framework IKA: Private Label: oportunitate?</h3>
-            <p>PL plătește facturile azi, dar brandul plătește viitorul.</p>
+        <a class="card-link" href="de-ce-ika-nu-este-partener-ci-un-client-cu-putere.html">
+          <article class="card series-blue" data-num="F2">
+            <div class="card-meta">3 min • Relație comercială</div>
+            <div class="card-title">IKA nu e partener, ci client</div>
+            <div class="card-subtitle">Asimetria riscului este regula jocului.</div>
           </article>
         </a>
 
-        <a href="de-ce-eliminarea-intermediarului-nu-ajuta.html" class="article-card-link">
-          <article class="article-card series-framework" data-num="F4">
-            <img class="article-thumb" src="images/framework-04-intermediar.jpg" alt="Framework IKA: De ce eliminarea intermediarului nu ajută">
-            <div class="article-meta">🕒 3 min • Distribuție</div>
-            <h3>Framework IKA: De ce eliminarea intermediarului nu ajută</h3>
-            <p>Uneori, un distribuitor bun este cel mai ieftin asigurator al afacerii tale.</p>
+        <a class="card-link" href="private-label-oportunitate-sau-capcana.html">
+          <article class="card series-blue" data-num="F3">
+            <div class="card-meta">3 min • Private Label</div>
+            <div class="card-title">Private Label: oportunitate?</div>
+            <div class="card-subtitle">PL plătește azi. Brandul plătește viitorul.</div>
           </article>
         </a>
 
-        <a href="negocierea-nu-incepe-la-masa.html" class="article-card-link">
-          <article class="article-card series-framework" data-num="F5">
-            <img class="article-thumb" src="images/framework-05-audit.jpg" alt="Framework IKA: Negocierea nu începe la masă">
-            <div class="article-meta">🕒 3 min • Negociere</div>
-            <h3>Framework IKA: Negocierea nu începe la masă</h3>
-            <p>Negocierea anuală este finalul unui proces de 12 luni.</p>
+        <a class="card-link" href="de-ce-eliminarea-intermediarului-nu-ajuta.html">
+          <article class="card series-blue" data-num="F4">
+            <div class="card-meta">3 min • Distribuție</div>
+            <div class="card-title">De ce eliminarea intermediarului nu ajută</div>
+            <div class="card-subtitle">Uneori, distribuitorul bun e cel mai ieftin asigurator.</div>
           </article>
         </a>
 
-        <a href="de-ce-auditul-comercial-este-primul-pas-nu-vanzarea.html" class="article-card-link">
-          <article class="article-card series-framework" data-num="F6">
-            <img class="article-thumb" src="images/framework-06-note.jpg" alt="Framework IKA: De ce auditul comercial este primul pas, nu vânzarea">
-            <div class="article-meta">🕒 2 min • Audit</div>
-            <h3>Framework IKA: De ce auditul comercial este primul pas, nu vânzarea</h3>
-            <p>Diagnostic. Decizie. Execuție.</p>
+        <a class="card-link" href="negocierea-nu-incepe-la-masa.html">
+          <article class="card series-blue" data-num="F5">
+            <div class="card-meta">3 min • Negociere</div>
+            <div class="card-title">Negocierea nu începe la masă</div>
+            <div class="card-subtitle">Negocierea anuală e finalul unui proces de 12 luni.</div>
           </article>
         </a>
-      </section>
-    </section>
 
-    <!-- =========================
-         AFTER ARTICLES: SERVICES
-         ========================= -->
-    <section class="container after-articles" id="services">
+        <a class="card-link" href="de-ce-auditul-comercial-este-primul-pas-nu-vanzarea.html">
+          <article class="card series-blue" data-num="F6">
+            <div class="card-meta">2 min • Audit</div>
+            <div class="card-title">De ce auditul comercial e primul pas</div>
+            <div class="card-subtitle">Diagnostic. Decizie. Execuție.</div>
+          </article>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODEL DE INTERVENȚIE -->
+  <section class="section section-white" id="servicii">
+    <div class="container">
       <h2 class="section-title">Cum te pot ajuta</h2>
       <p class="section-subtitle">
-        Diagnostic, decizie și execuție în retail modern — fără improvizație, fără “presupuneri”.
+        Diagnostic, decizie și execuție în retail modern — fără improvizație, fără ambiguități.
       </p>
 
-      <div class="grid-3" aria-label="Servicii">
-        <div class="card">
-          <h3><span class="kword">Diagnostic</span> comercial</h3>
-          <p>Clarifici rapid unde se pierde marjă și ce decizii sunt riscante înainte să coste.</p>
-          <ul>
-            <li>Audit P&amp;L, clauze, bugete promo</li>
-            <li>Identificare pierderi (taxe, retururi, execuție)</li>
-            <li>Plan de acțiune 30 zile</li>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3 class="service-title">Diagnostic comercial</h3>
+          <p class="service-lead">Clarificăm rapid unde se pierde marjă și unde riscul este mascat.</p>
+          <ul class="service-list">
+            <li>Analiză P&amp;L / clauze / taxe / retururi</li>
+            <li>Repere clare + plan de acțiune pe 30 zile</li>
           </ul>
         </div>
 
-        <div class="card">
-          <h3><span class="kword">Decizie</span> de listare</h3>
-          <p>Validare de fezabilitate + dosar de listare construit pe rol în categorie.</p>
-          <ul>
-            <li>Argumentare categorie / shopper</li>
-            <li>Preț, marjă, mecanici promo</li>
-            <li>Plan de execuție post-listare</li>
+        <div class="service-card">
+          <h3 class="service-title">Decizie de listare</h3>
+          <p class="service-lead">Validăm fezabilitatea și construim decizia în rol de categorie.</p>
+          <ul class="service-list">
+            <li>Argumentare categorie / shopper / poziționare</li>
+            <li>Preț, marjă, mecanici promo, risc contractual</li>
           </ul>
         </div>
 
-        <div class="card">
-          <h3><span class="kword">Execuție</span> &amp; disciplină comercială</h3>
-          <p>Transformi planul în rezultate: rutine, KPI-uri, control operațional simplu.</p>
-          <ul>
-            <li>Ritualuri de business review</li>
-            <li>KPI și dashboard “decizii”</li>
-            <li>Corecții rapide în teren</li>
+        <div class="service-card">
+          <h3 class="service-title">Execuție &amp; disciplină</h3>
+          <p class="service-lead">Transformăm planul în rutine și indicatori care țin rezultatul stabil.</p>
+          <ul class="service-list">
+            <li>Ritualuri de business review + KPI simpli</li>
+            <li>Corecții rapide în execuție, fără haos</li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- =========================
-         CHECKLIST (6 items)
-         ========================= -->
-    <section class="container checklist-wrap" id="checklist">
+  <!-- CHECKLIST -->
+  <section class="section section-soft" id="checklist">
+    <div class="container">
       <h2 class="section-title">Checklist: ești pregătit pentru IKA?</h2>
-      <p class="section-subtitle">
-        Dacă la 2–3 întrebări răspunsul e “nu sunt sigur”, de obicei e semn că ai nevoie de diagnostic înainte de listare.
+      <p class="section-subtitle emphasis">
+        Dacă la 2–3 întrebări răspunsul este „nu sunt sigur”, ai nevoie de diagnostic înainte de listare.
       </p>
 
-      <div class="check-grid" aria-label="Checklist IKA">
-        <div class="check-item">
-          <strong>Categorie</strong>
-          <div>De ce ar avea retailerul nevoie de tine? Ce aduci nou în segment?</div>
+      <div class="check-grid">
+        <div class="check-card">
+          <div class="check-title">Categorie</div>
+          <div class="check-text">De ce ar avea retailerul nevoie de tine? Ce aduci nou în segment?</div>
         </div>
-        <div class="check-item">
-          <strong>Preț real</strong>
-          <div>Ai calculat marja scăzând taxe, retururi, logistică, penalități?</div>
+        <div class="check-card">
+          <div class="check-title">Preț real</div>
+          <div class="check-text">Ai calculat marja scăzând taxe, retururi, logistică, penalități?</div>
         </div>
-        <div class="check-item">
-          <strong>Contract</strong>
-          <div>Înțelegi clauzele care se activează automat în faza de execuție?</div>
+        <div class="check-card">
+          <div class="check-title">Contract</div>
+          <div class="check-text">Înțelegi clauzele care se activează automat în faza de execuție?</div>
         </div>
-        <div class="check-item">
-          <strong>Cash-flow</strong>
-          <div>Poți susține operațiunile cu termene lungi și investiții promo?</div>
+        <div class="check-card">
+          <div class="check-title">Cash-flow</div>
+          <div class="check-text">Poți susține termenele lungi și investițiile promo fără să rupi structura?</div>
         </div>
-        <div class="check-item">
-          <strong>Execuție</strong>
-          <div>Cum arată produsul lângă liderul de piață? Câștigă în 3 secunde?</div>
+        <div class="check-card">
+          <div class="check-title">Execuție</div>
+          <div class="check-text">Cum arată produsul lângă liderul de piață? Câștigă în 3 secunde?</div>
         </div>
-        <div class="check-item">
-          <strong>Capacitate operațională</strong>
-          <div>Ai resurse să susții listarea 90 de zile fără improvizație?</div>
+        <div class="check-card">
+          <div class="check-title">Capacitate operațională</div>
+          <div class="check-text">Ai resurse să susții listarea 90 de zile fără improvizație?</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- =========================
-         CONTACT (checkboxes + free text)
-         ========================= -->
-    <section class="container contact-wrap" id="contact">
+  <!-- DIAGNOSTIC (CTA) -->
+  <section class="section section-white" id="diagnostic">
+    <div class="container">
       <h2 class="section-title">Solicită un diagnostic inițial</h2>
       <p class="section-subtitle">
-        Bifezi problema principală și lași datele. Revin cu 2–3 întrebări scurte și o propunere de pași.
+        Completează câteva repere. Revin cu un răspuns argumentat și pașii următori.
       </p>
 
-      <div class="card contact-card">
-        <form class="contact-form">
-          <div class="field-row">
-            <label>
-              Nume
-              <input type="text" name="name" placeholder="Nume și prenume">
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" placeholder="email@domeniu.ro">
-            </label>
+      <form class="diag-form" id="diagForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Nume</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
           </div>
-
-          <div class="checkbox-group" aria-label="Subiecte">
-            <div class="checkbox-item">
-              <input type="checkbox" name="topic" value="listare" id="t1">
-              <label for="t1">Listare / delistare</label>
-            </div>
-            <div class="checkbox-item">
-              <input type="checkbox" name="topic" value="pret" id="t2">
-              <label for="t2">Preț / marjă / condiții</label>
-            </div>
-            <div class="checkbox-item">
-              <input type="checkbox" name="topic" value="promotii" id="t3">
-              <label for="t3">Promoții neprofitabile</label>
-            </div>
-            <div class="checkbox-item">
-              <input type="checkbox" name="topic" value="executie" id="t4">
-              <label for="t4">Execuție în magazine</label>
-            </div>
-            <div class="checkbox-item">
-              <input type="checkbox" name="topic" value="cashflow" id="t5">
-              <label for="t5">Cash-flow / termene / taxe</label>
-            </div>
-            <div class="checkbox-item">
-              <input type="checkbox" name="topic" value="audit" id="t6">
-              <label for="t6">Audit comercial complet</label>
-            </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
           </div>
+        </div>
 
-          <label>
-            Context (opțional)
-            <textarea name="message" rows="5" placeholder="2–3 rânduri: categorie, rețea, obiectiv, blocaj."></textarea>
-          </label>
+        <fieldset class="fieldset">
+          <legend>Selectează situația dominantă</legend>
+          <label class="checkline"><input type="checkbox" name="topic" value="Pregătire listare nouă"> Pregătire listare nouă (validare fezabilitate)</label>
+          <label class="checkline"><input type="checkbox" name="topic" value="Renegociere contractuală"> Renegociere contractuală / presiune pe marjă</label>
+          <label class="checkline"><input type="checkbox" name="topic" value="Audit KAM"> Audit KAM (execuție la raft)</label>
+          <label class="checkline"><input type="checkbox" name="topic" value="Performanță sub așteptări"> Performanță sub așteptări / stagnare vânzări</label>
+          <label class="checkline"><input type="checkbox" name="topic" value="Nu sunt sigur"> Nu sunt sigur unde este problema</label>
+        </fieldset>
 
-          <div class="actions">
-            <a class="btn btn-primary" href="mailto:email@domeniu.ro?subject=Diagnostic%20initial%20IKA%20-%20Cerere">
-              Trimite email
-            </a>
-            <span class="form-note">Înlocuiește <strong>email@domeniu.ro</strong> cu emailul tău real.</span>
-          </div>
-        </form>
+        <div class="field">
+          <label for="context">Context (opțional)</label>
+          <textarea id="context" name="context" rows="4" placeholder="Descrie pe scurt incertitudinea principală (marjă, logistică, promoții, negociere etc.)"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Inițiază dialogul</button>
+          <div class="form-note">Răspund de regulă în 24–48h. Confidențial.</div>
+        </div>
+
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+          Mulțumesc. Am primit solicitarea. Revin în 24–48h cu 2–3 întrebări scurte și pașii următori.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- MESAJ FINAL -->
+  <section class="section section-soft" id="closing">
+    <div class="container closing">
+      <p class="closing-text">
+        Retailul modern nu iartă deciziile superficiale.<br>
+        Dacă ai ajuns până aici, probabil cauți claritate, nu confirmări rapide.<br>
+        Putem continua conversația.
+      </p>
+      <p class="closing-sign">— Dan Chiculiță</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-name">Dan Chiculiță</div>
+        <div class="footer-role">Senior Commercial Consultant | Retail &amp; FMCG Strategy</div>
+        <div class="footer-tags">IKA • Pricing • Contracte • Execuție • Cash-flow</div>
       </div>
-    </section>
 
-    <footer class="footer">
-      <p style="font-size:1.35rem;margin:0 0 8px"><strong>Dan Chiculiță</strong></p>
-      <p style="opacity:.85;margin:0 0 18px">Senior Commercial Consultant | Retail &amp; FMCG Strategy</p>
-      <p style="opacity:.85;margin:0 0 18px">IKA • Pricing • Contracte • Execuție • Cash-flow</p>
-      <p style="margin:0">
-        <a href="https://www.linkedin.com/in/danchiculita" target="_blank" rel="noopener">Profil profesional LinkedIn</a>
-      </p>
-    </footer>
+      <div class="footer-right">
+        <a class="btn-outline" href="https://www.linkedin.com/in/danchiculita" target="_blank" rel="noopener">
+          Profil profesional LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
 
-  </main>
+  <script>
+    // Confirmare "varianta B" după submit (fără backend).
+    // Dacă vrei trimitere efectivă, ulterior conectăm un Google Form / Formspree / Netlify Forms.
+    (function () {
+      const form = document.getElementById('diagForm');
+      const success = document.getElementById('formSuccess');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Minim: validare HTML5 (required/email) deja funcționează.
+        // Afișăm confirmarea.
+        success.style.display = 'block';
+
+        // Scroll mic către mesajul de confirmare (elegant).
+        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        // Opțional: reset (poți comenta dacă vrei să păstreze datele)
+        form.reset();
+      });
+    })();
+  </script>
 
 </body>
 </html>
-
