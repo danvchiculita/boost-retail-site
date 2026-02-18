@@ -546,3 +546,37 @@ input:focus, textarea:focus{
   .brand-name{ font-size: 38px; }
   .nav{ flex-wrap:wrap; }
 }
+
+/* ===== Cards: 2 coloane + accent doar pe stanga ===== */
+.articles-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:18px;
+}
+
+@media (max-width: 900px){
+  .articles-grid{ grid-template-columns:1fr; }
+}
+
+.article-card{
+  position:relative;
+  border:1px solid #e6e9ef;
+  border-radius:16px;
+  background:#fff;
+  padding:18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.05);
+  overflow:hidden;
+}
+
+.article-card::before{
+  content:"";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:6px;
+  border-radius:16px 0 0 16px;
+  background: var(--series-accent, #23a455);
+}
+
+.series-greseli{ --series-accent:#23a455; }
+.series-framework{ --series-accent:#123a66; }
+
