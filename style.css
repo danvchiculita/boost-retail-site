@@ -1,5 +1,5 @@
 /* =========================
-   BASE
+   SYSTEM
 ========================= */
 :root{
   --navy:#0e2a4a;
@@ -9,7 +9,7 @@
   --border:#e6e9ef;
   --bg:#ffffff;
   --bg-alt:#f6f8fb;
-  --shadow: 0 10px 25px rgba(0,0,0,.05);
+  --shadow: 0 10px 25px rgba(0,0,0,.06);
 
   --green:#23a455;
 }
@@ -60,18 +60,14 @@ img{ max-width:100%; display:block; }
 }
 
 /* =========================
-   HEADER
+   HEADER (site + blog)
 ========================= */
-/* ===== HEADER: brand stanga / nav dreapta ===== */
 .site-header{
   background:#fff;
   padding: 22px 0;
 }
 
-/* obligatoriu: scoate orice centrare mostenita */
-.site-header, .brand{
-  text-align: left;
-}
+.site-header, .brand{ text-align:left; }
 
 .header-inner{
   display:flex;
@@ -87,8 +83,8 @@ img{ max-width:100%; display:block; }
 }
 
 .brand-name{
-  font-size: 44px;
-  font-weight: 800;
+  font-size: 44px;      /* “logo” mai mare */
+  font-weight: 800;     /* premium */
   letter-spacing: -1px;
   color: var(--navy);
   margin:0;
@@ -119,47 +115,37 @@ img{ max-width:100%; display:block; }
 .nav-link:hover{ text-decoration: underline; }
 .nav-link.active{ text-decoration: underline; }
 
-.nav-sep{
-  opacity:.55;
-  margin: 0 4px;
-}
+.nav-sep{ opacity:.55; margin:0 4px; }
 
 .nav-link.lang{ font-weight:700; }
 .nav-link.disabled{ opacity:.6; pointer-events:none; }
 
-/* Mobile */
 @media (max-width: 900px){
-  .header-inner{
-    flex-direction:column;
-    align-items:flex-start;
-  }
+  .header-inner{ flex-direction:column; align-items:flex-start; }
   .brand-name{ font-size: 38px; }
-  .nav{
-    flex-wrap:wrap;
-    justify-content:flex-start;
-  }
+  .nav{ flex-wrap:wrap; justify-content:flex-start; }
 }
+
 /* =========================
-   HERO
+   HERO (site + blog)
+   IMPORTANT: dacă nu ai imagine, rămâne gradient premium.
+   Dacă ai imagine, pune în repo: images/hero.jpg
 ========================= */
 .hero{
   position:relative;
   height: 360px;
-  background-image: url("images/supermarket.jpg");
+  background:
+    linear-gradient(180deg, rgba(14,42,74,.82), rgba(14,42,74,.62)),
+    url("images/hero.jpg");
   background-size: cover;
   background-position: center;
   overflow:hidden;
   border-bottom: 4px solid var(--green);
 }
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background: rgba(14, 42, 74, 0.55);
-}
+.hero-overlay{ display:none; } /* păstrăm simplu, gradientul face treaba */
 
 .hero-inner{
-  position:relative;
   height:100%;
   display:flex;
   align-items:center;
@@ -167,16 +153,20 @@ img{ max-width:100%; display:block; }
 }
 
 .hero-slogan{
-  font-size: 26px;       /* MAI MARE */
-  font-weight: 800;      /* MAI PUTERNIC */
+  font-size: 26px;       /* mai mare */
+  font-weight: 800;      /* mai puternic */
   letter-spacing: 2px;
   color:#fff;
   text-align:center;
   text-transform: uppercase;
+  padding: 0 10px;
 }
 
+/* Dacă vrei accent navy în blog în loc de verde: */
+.blog-page .hero{ border-bottom-color: var(--navy-2); }
+
 /* =========================
-   PILONI (3 CASETE)
+   PILONI (3 casete) - pentru HOME
 ========================= */
 .pillars{
   display:grid;
@@ -185,7 +175,7 @@ img{ max-width:100%; display:block; }
   margin-top: 22px;
 }
 
-.pillar{
+.panel{
   background:#fff;
   border:1px solid var(--border);
   border-radius:16px;
@@ -193,128 +183,115 @@ img{ max-width:100%; display:block; }
   box-shadow: var(--shadow);
 }
 
-.pillar h3{
+.panel-title{
   margin:0 0 8px 0;
   font-weight:800;
   color: var(--navy);
 }
-.pillar p{ margin:0; color: var(--text); }
+
+.panel-text{
+  margin:0;
+  color: var(--text);
+}
 
 @media (max-width: 900px){
   .pillars{ grid-template-columns:1fr; }
 }
 
 /* =========================
-   SERIES + ARTICLES
+   CARDS GRID (blog + home)
+   Cerințe:
+   - 2 coloane
+   - doar accent stânga
+   - verde pentru Greșeli, albastru pentru Framework
+========================= */
+.cards-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:18px;
+  margin-top: 14px;
+}
+
+@media (max-width: 900px){
+  .cards-grid{ grid-template-columns:1fr; }
+}
+
+.card-link{
+  text-decoration:none;
+  display:block;
+}
+
+.card{
+  position:relative;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+  box-shadow: var(--shadow);
+  overflow:hidden;
+}
+
+/* DOAR linie accent stânga */
+.card::before{
+  content:"";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:6px;
+  border-radius:16px 0 0 16px;
+  background: var(--card-accent, var(--green));
+}
+
+/* Accente serii */
+.series-green{ --card-accent: var(--green); }
+.series-blue{  --card-accent: var(--navy-2); }
+
+/* Text în card */
+.card-meta{
+  font-size:13px;
+  font-weight:600;
+  color: var(--muted);
+  margin-bottom:6px;
+}
+
+.card-title{
+  font-size:16px;
+  font-weight:800;
+  color: var(--text);
+  margin-bottom:6px;
+  line-height:1.25;
+}
+
+.card-subtitle{
+  color: var(--muted);
+  margin:0;
+  line-height:1.35;
+}
+
+/* =========================
+   BLOG: titluri serii accentuate
 ========================= */
 .series{ margin-top: 28px; }
-.series-header{ margin-bottom: 14px; }
+
+.series-head{
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
 
 .series-title{
   font-size: 22px;
   font-weight: 800;
   margin: 0 0 6px 0;
-}
-.series-subtitle{
-  margin: 0;
-  color: var(--muted);
+  letter-spacing: -0.3px;
 }
 
-.articles-grid{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 COLOANE */
-  gap:18px;
-  margin-top: 12px;
-}
-
-@media (max-width: 900px){
-  .articles-grid{ grid-template-columns:1fr; }
-}
-
-.article-card-link{
-  text-decoration:none;
-  display:block;
-}
-
-.article-card{
-  position:relative;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:16px;
-  box-shadow: var(--shadow);
-  padding:18px;
-  overflow:hidden;
-}
-
-/* DOAR LINIA DIN STÂNGA */
-.article-card::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:0;
-  bottom:0;
-  width:6px;
-  border-radius:16px 0 0 16px;
-  background: var(--series-accent, var(--green));
-}
-
-.series-greseli{ --series-accent: var(--green); }
-.series-framework{ --series-accent: var(--navy-2); }
-
-.meta{
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--muted);
-  margin-bottom: 6px;
-}
-
-.card-title{
-  margin: 0 0 6px 0;
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--text);
-}
-
-.card-desc{
-  margin: 0;
-  color: var(--muted);
-}
-
-/* =========================
-   HELP (Cum te pot ajuta)
-========================= */
-.help-grid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap:18px;
-  margin-top: 20px;
-}
-@media (max-width: 900px){
-  .help-grid{ grid-template-columns:1fr; }
-}
-
-.help-card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:18px;
-  box-shadow: var(--shadow);
-}
-.help-card h3{
-  margin:0 0 10px 0;
-  font-weight:800;
-  color: var(--navy);
-}
-.help-card p{ margin:0 0 10px 0; color: var(--text); }
-.help-card ul{
+.series-desc{
   margin:0;
-  padding-left: 18px;
   color: var(--muted);
 }
-.help-card li{ margin: 6px 0; }
 
 /* =========================
-   CHECKLIST (6 CASETE)
+   CHECKLIST 6 CASETE (home)
 ========================= */
 .checklist-grid{
   display:grid;
@@ -322,6 +299,7 @@ img{ max-width:100%; display:block; }
   gap:16px;
   margin-top: 22px;
 }
+
 @media (max-width: 900px){
   .checklist-grid{ grid-template-columns:1fr; }
 }
@@ -339,10 +317,17 @@ img{ max-width:100%; display:block; }
   font-weight:800;
   color: var(--navy-2);
 }
-.check-item p{ margin:0; color: var(--muted); }
+.check-item p{
+  margin:0;
+  color: var(--muted);
+}
 
 /* =========================
-   FORM
+   FORM (blog)
+   Cerințe:
+   - checkbox mic, înaintea textului
+   - delimitare discretă
+   - fără “țipăt” vizual
 ========================= */
 .form-box{
   max-width:900px;
@@ -378,7 +363,7 @@ input, textarea{
 }
 
 input:focus, textarea:focus{
-  border-color: rgba(18,58,102,.5);
+  border-color: rgba(18,58,102,.55);
   box-shadow: 0 0 0 4px rgba(18,58,102,.08);
 }
 
@@ -423,17 +408,41 @@ input:focus, textarea:focus{
   padding: 12px 16px;
   border-radius: 12px;
   cursor:pointer;
+  text-decoration:none;
+  display:inline-block;
 }
-.btn-primary:hover{
-  filter: brightness(1.05);
+.btn-primary:hover{ filter: brightness(1.05); }
+
+.btn-secondary{
+  border: 1px solid rgba(14,42,74,.22);
+  background: #fff;
+  color: var(--navy);
+  font-weight:800;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-block;
+}
+
+/* CTA row */
+.cta-row{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top: 12px;
 }
 
 /* =========================
-   CLOSING QUOTE
+   CLOSING QUOTE (blog)
+   Cerințe:
+   - font mai mare
+   - centrat
+   - “pâlnie”
+   - semnătură dreapta
 ========================= */
-.closing{
-  margin-top: 26px;
-}
+.closing{ margin-top: 26px; }
 
 .closing-quote{
   max-width:720px;
@@ -454,6 +463,9 @@ input:focus, textarea:focus{
 
 /* =========================
    FOOTER
+   Cerințe:
+   - navy
+   - buton LinkedIn “activ”
 ========================= */
 .site-footer{
   background: var(--navy);
@@ -488,166 +500,8 @@ input:focus, textarea:focus{
   font-weight:800;
   text-decoration:none;
 }
-
-.linkedin-btn:hover{
-  background:#ffffff2a;
-}
+.linkedin-btn:hover{ background:#ffffff2a; }
 
 @media (max-width: 900px){
-  .footer-inner{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-}
-
-/* ===== Header layout fix (nav in dreapta) ===== */
-.header-inner{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:24px;
-}
-
-.brand{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-
-.brand-name{
-  font-size: 44px;
-  font-weight: 800;
-  letter-spacing: -1px;
-  color:#0e2a4a;
-}
-
-.brand-role{
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.nav{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  white-space:nowrap;
-}
-
-.nav-link{
-  text-decoration:none;
-  font-weight:600;
-  padding:2px 0;
-}
-
-.nav-link:hover{ text-decoration: underline; }
-.nav-link.active{ text-decoration: underline; }
-
-.nav-sep{ opacity:.55; margin:0 4px; }
-
-.nav-link.disabled{ opacity:.6; pointer-events:none; }
-
-@media (max-width: 900px){
-  .header-inner{ flex-direction:column; align-items:flex-start; }
-  .brand-name{ font-size: 38px; }
-  .nav{ flex-wrap:wrap; }
-}
-
-/* ===== Cards: 2 coloane + accent doar pe stanga ===== */
-.articles-grid{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap:18px;
-}
-
-@media (max-width: 900px){
-  .articles-grid{ grid-template-columns:1fr; }
-}
-
-.article-card{
-  position:relative;
-  border:1px solid #e6e9ef;
-  border-radius:16px;
-  background:#fff;
-  padding:18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.05);
-  overflow:hidden;
-}
-
-.article-card::before{
-  content:"";
-  position:absolute;
-  left:0; top:0; bottom:0;
-  width:6px;
-  border-radius:16px 0 0 16px;
-  background: var(--series-accent, #23a455);
-}
-
-.series-greseli{ --series-accent:#23a455; }
-.series-framework{ --series-accent:#123a66;
-}
-
-/* ===== Cards (STRUCTURA TA: cards-grid / card / series-green) ===== */
-
-.cards-grid{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));  /* 2 coloane */
-  gap:18px;
-  margin-top: 14px;
-}
-
-@media (max-width: 900px){
-  .cards-grid{ grid-template-columns:1fr; }
-}
-
-.card-link{
-  text-decoration:none;
-  display:block;
-}
-
-.card{
-  position:relative;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:18px;
-  box-shadow: var(--shadow);
-  overflow:hidden;
-}
-
-/* DOAR linia de accent din stanga */
-.card::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:0;
-  bottom:0;
-  width:6px;
-  border-radius:16px 0 0 16px;
-  background: var(--card-accent, var(--green));
-}
-
-/* culori serii */
-.series-green{ --card-accent: var(--green); }     /* Greșeli */
-.series-blue{  --card-accent: var(--navy-2); }    /* Framework */
-
-/* tipografie in card */
-.card-meta{
-  font-size:13px;
-  font-weight:600;
-  color: var(--muted);
-  margin-bottom:6px;
-}
-
-.card-title{
-  font-size:16px;
-  font-weight:800;
-  color: var(--text);
-  margin-bottom:6px;
-  line-height:1.25;
-}
-
-.card-subtitle{
-  color: var(--muted);
-  margin:0;
-  line-height:1.35;
+  .footer-inner{ flex-direction:column; align-items:flex-start; }
 }
