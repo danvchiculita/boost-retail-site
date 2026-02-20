@@ -583,5 +583,71 @@ input:focus, textarea:focus{
 }
 
 .series-greseli{ --series-accent:#23a455; }
-.series-framework{ --series-accent:#123a66; }
+.series-framework{ --series-accent:#123a66;
+}
 
+/* ===== Cards (STRUCTURA TA: cards-grid / card / series-green) ===== */
+
+.cards-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));  /* 2 coloane */
+  gap:18px;
+  margin-top: 14px;
+}
+
+@media (max-width: 900px){
+  .cards-grid{ grid-template-columns:1fr; }
+}
+
+.card-link{
+  text-decoration:none;
+  display:block;
+}
+
+.card{
+  position:relative;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+  box-shadow: var(--shadow);
+  overflow:hidden;
+}
+
+/* DOAR linia de accent din stanga */
+.card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:6px;
+  border-radius:16px 0 0 16px;
+  background: var(--card-accent, var(--green));
+}
+
+/* culori serii */
+.series-green{ --card-accent: var(--green); }     /* Greșeli */
+.series-blue{  --card-accent: var(--navy-2); }    /* Framework */
+
+/* tipografie in card */
+.card-meta{
+  font-size:13px;
+  font-weight:600;
+  color: var(--muted);
+  margin-bottom:6px;
+}
+
+.card-title{
+  font-size:16px;
+  font-weight:800;
+  color: var(--text);
+  margin-bottom:6px;
+  line-height:1.25;
+}
+
+.card-subtitle{
+  color: var(--muted);
+  margin:0;
+  line-height:1.35;
+}
