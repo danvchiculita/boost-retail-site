@@ -135,8 +135,8 @@ img{ max-width:100%; display:block; }
   position:relative;
   height: 360px;
   background:
-    linear-gradient(180deg, rgba(14,42,74,.82), rgba(14,42,74,.62)),
-    url("images/hero.jpg");
+    linear-gradient(180deg, rgba(14,42,74,.75), rgba(14,42,74,.65)),
+    url("images/supermarket.jpeg");
   background-size: cover;
   background-position: center;
   overflow:hidden;
