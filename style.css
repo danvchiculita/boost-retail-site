@@ -136,7 +136,7 @@ img{ max-width:100%; display:block; }
   height: 360px;
   background:
     linear-gradient(180deg, rgba(14,42,74,.75), rgba(14,42,74,.65)),
-    url("images/supermarket.jpeg");
+    url("images/supermarket.jpg");
   background-size: cover;
   background-position: center;
   overflow:hidden;
